@@ -4,20 +4,16 @@
  * Instructor: @EliezerLopez
  * */
 #include <string>
+#include <iostream>
 using namespace std;
 
-class Empleado{
+class Empleado {
 
 public:
 
     float calcularSueldoMensual();
-    float calcularSueldoMensual(int numeroDePagas);
     string nombreCompleto();
-
-    const string* getNombre() const;
-    string getPrimerApellido() const;
-    float getSueldoAnual() const;
-    const int getNumeroDePagas() const;
+    friend class Supervisor;
 
     void setNombre(string nombre);
     void setPrimerApellido(string primerApellido);
@@ -30,8 +26,19 @@ private:
     static const int numeroDePagas = 12;
 };
 
+class Supervisor {
+public:
+    void mostrarSueldoAnualEmpleado(const Empleado* empleado);
+private:
+};
+
 int main(){
-    
+
+    Empleado* p_empleado = new Empleado();
+    p_empleado->setSueldoAnual(50500);
+    Supervisor* p_supervisor = new Supervisor();
+    p_supervisor->mostrarSueldoAnualEmpleado(p_empleado);
+
     return 0;
 }
 
@@ -39,28 +46,12 @@ float Empleado::calcularSueldoMensual(){
     return (sueldoAnual/numeroDePagas);
 }
 
-float Empleado::calcularSueldoMensual(int numeroDePagas){
-    return (sueldoAnual/numeroDePagas);
-}
-
 string Empleado::nombreCompleto(){
     return (nombre + " " + primerApellido);
 }
 
-const string* Empleado::getNombre() const {
-    return &nombre;
-}
-
-string Empleado::getPrimerApellido() const{
-    return primerApellido;
-}
-
-float Empleado::getSueldoAnual() const{
-    return sueldoAnual;
-}
-
-const int Empleado::getNumeroDePagas() const{
-    return numeroDePagas;
+void Empleado::setSueldoAnual(float sueldoAnual){
+    this->sueldoAnual = sueldoAnual;
 }
 
 void Empleado::setNombre(string nombre){
@@ -71,6 +62,6 @@ void Empleado::setPrimerApellido(string primerApellido){
     this->primerApellido = primerApellido;
 }
 
-void Empleado::setSueldoAnual(float sueldoAnual){
-    this->sueldoAnual = sueldoAnual;
+void Supervisor::mostrarSueldoAnualEmpleado(const Empleado* empleado){
+    cout << "El sueldo anual del empleado es: " << empleado->sueldoAnual << endl;
 }
