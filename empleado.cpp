@@ -4,26 +4,32 @@
  * Instructor: @EliezerLopez
  * */
 
-<<<<<<< HEAD
 #include <string>
 using namespace std;
 
-<<<<<<< HEAD
-class Empleado{
-=======
 class Empleado {
->>>>>>> 505fd385e639d9336f762a1bffb448d59999f5a1
-=======
-class Empleado {
->>>>>>> 01_03e
 
 public:
 
+    float calcularSueldoMensual();
+    string nombreCompleto();
+
 private:
 
+    string nombre, primerApellido;
+    float sueldoAnual;
+    static const int numeroDePagas = 12;
 };
 
 int main(){
     
     return 0;
+}
+
+float Empleado::calcularSueldoMensual(){
+    return (sueldoAnual/numeroDePagas);
+}
+
+string Empleado::nombreCompleto(){
+    return (nombre + " " + primerApellido);
 }
