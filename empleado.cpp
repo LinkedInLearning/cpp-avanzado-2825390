@@ -13,6 +13,11 @@ public:
     float calcularSueldoMensual();
     string nombreCompleto();
 
+    string getNombre() const;
+    string getPrimerApellido() const;
+    float getSueldoAnual() const;
+    const int getNumeroDePagas() const;
+
 private:
 
     string nombre, primerApellido;
@@ -21,7 +26,7 @@ private:
 };
 
 int main(){
-
+    
     return 0;
 }
 
@@ -31,4 +36,20 @@ float Empleado::calcularSueldoMensual(){
 
 string Empleado::nombreCompleto(){
     return (nombre + " " + primerApellido);
+}
+
+string Empleado::getNombre() const {
+    return nombre;
+}
+
+string Empleado::getPrimerApellido() const{
+    return primerApellido;
+}
+
+float Empleado::getSueldoAnual() const{
+    return sueldoAnual;
+}
+
+const int Empleado::getNumeroDePagas() const{
+    return numeroDePagas;
 }
