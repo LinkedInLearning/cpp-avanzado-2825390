@@ -1,3 +1,9 @@
+/*
+ * Curso: C++ Avanzado
+ * Plataforma: LinkedIn Learning
+ * Instructor: @EliezerLopez
+ * */
+
 #include <string>
 using namespace std;
 
@@ -16,14 +22,6 @@ private:
 };
 
 int main(){
-
-    // Manejo automático de memoria
-    Empleado empleado1;
-    float sueldoEmpleado1 = empleado1.calcularSueldoMensual();
-
-    // Manejo NO automático de memoria
-    Empleado *p = new Empleado();
-    float sueldoEmpleado2 = p->calcularSueldoMensual();
     
     return 0;
 }
