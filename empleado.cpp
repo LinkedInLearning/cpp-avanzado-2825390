@@ -4,9 +4,6 @@
  * Instructor: @EliezerLopez
  * */
 
-#include <string>
-using namespace std;
-
 class Empleado {
 
 public:
