@@ -6,7 +6,7 @@
 #include <string>
 using namespace std;
 
-class Empleado{
+class Empleado {
 
 public:
 
@@ -17,6 +17,10 @@ public:
     string getPrimerApellido() const;
     float getSueldoAnual() const;
     const int getNumeroDePagas() const;
+
+    void setNombre(string nombre);
+    void setPrimerApellido(string primerApellido);
+    void setSueldoAnual(float sueldoAnual);
 
 private:
 
@@ -52,4 +56,16 @@ float Empleado::getSueldoAnual() const{
 
 const int Empleado::getNumeroDePagas() const{
     return numeroDePagas;
+}
+
+void Empleado::setNombre(string nombre){
+    this->nombre = nombre;
+}
+
+void Empleado::setPrimerApellido(string primerApellido){
+    this->primerApellido = primerApellido;
+}
+
+void Empleado::setSueldoAnual(float sueldoAnual){
+    this->sueldoAnual = sueldoAnual;
 }
