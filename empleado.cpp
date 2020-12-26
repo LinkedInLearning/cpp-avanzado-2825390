@@ -4,6 +4,7 @@
  * Instructor: @EliezerLopez
  * */
 
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -23,14 +24,13 @@ private:
 
 int main(){
     
-    // Manejo automático de memoria
-    Empleado empleado1;
-    float sueldoEmpleado1 = empleado1.calcularSueldoMensual();
+    Empleado empleado1 = new Empleado();
+    empleado1.nombre = Alex;
+    empleado1.primerApellido = Sampedro;
+    empleado1.sueldoAnual = 80000,50;
 
-    // Manejo NO automático de memoria
-    Empleado *p = new Empleado();
-    float sueldoEmpleado2 = p->calcularSueldoMensual();
-    
+    cout << "El sueldo anual de " empleado1->nombreCompleto " es " empleado1->calcularSueldoMensual() ". " << endl;
+
     return 0;
 }
 
