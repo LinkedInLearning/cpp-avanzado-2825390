@@ -6,11 +6,12 @@
 #include <string>
 using namespace std;
 
-class Empleado{
+class Empleado {
 
 public:
 
     float calcularSueldoMensual();
+    float calcularSueldoMensual(int numeroDePagas);
     string nombreCompleto();
 
     const string* getNombre() const;
@@ -35,6 +36,10 @@ int main(){
 }
 
 float Empleado::calcularSueldoMensual(){
+    return (sueldoAnual/numeroDePagas);
+}
+
+float Empleado::calcularSueldoMensual(int numeroDePagas){
     return (sueldoAnual/numeroDePagas);
 }
 
