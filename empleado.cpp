@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-class Empleado {
+class Empleado{
 
 public:
 
