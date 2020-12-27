@@ -13,7 +13,6 @@ public:
 
     float calcularSueldoMensual();
     string nombreCompleto();
-    friend class Supervisor;
 
     void setNombre(string nombre);
     void setPrimerApellido(string primerApellido);
@@ -26,18 +25,7 @@ private:
     static const int numeroDePagas = 12;
 };
 
-class Supervisor {
-public:
-    void mostrarSueldoAnualEmpleado(const Empleado* empleado);
-private:
-};
-
 int main(){
-
-    Empleado* p_empleado = new Empleado();
-    p_empleado->setSueldoAnual(50500);
-    Supervisor* p_supervisor = new Supervisor();
-    p_supervisor->mostrarSueldoAnualEmpleado(p_empleado);
 
     return 0;
 }
@@ -60,8 +48,4 @@ void Empleado::setNombre(string nombre){
 
 void Empleado::setPrimerApellido(string primerApellido){
     this->primerApellido = primerApellido;
-}
-
-void Supervisor::mostrarSueldoAnualEmpleado(const Empleado* empleado){
-    cout << "El sueldo anual del empleado es: " << empleado->sueldoAnual << endl;
 }
