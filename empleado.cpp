@@ -7,11 +7,12 @@
 #include <iostream>
 using namespace std;
 
-class Empleado{
+class Empleado {
 
 public:
 
     Empleado();
+    Empleado(string nombre, string primerApellido);
     float calcularSueldoMensual();
     string nombreCompleto();
 
@@ -28,6 +29,7 @@ private:
 
 int main(){
 
+    Empleado* p_empleado = new Empleado("Evan", "Craft");
     return 0;
 }
 
@@ -54,4 +56,9 @@ void Empleado::setPrimerApellido(string primerApellido){
 Empleado::Empleado(){
     nombre = "Eliezer";
     primerApellido = "Lopez";
+}
+
+Empleado::Empleado(string nombre, string primerApellido){
+    this->nombre = nombre;
+    this->primerApellido = primerApellido;
 }
