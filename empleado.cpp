@@ -7,12 +7,12 @@
 #include <iostream>
 using namespace std;
 
-class Empleado{
+class Empleado {
 
 public:
 
     Empleado();
-    Empleado(string n, string pa) : nombre(n), primerApellido(pa) {sueldoAnual = 60000;};
+    Empleado(const Empleado& empleadoOriginal);
     float calcularSueldoMensual();
     string nombreCompleto();
 
@@ -29,7 +29,13 @@ private:
 
 int main(){
 
-    Empleado* p_empleado = new Empleado("Evan", "Craft");
+    Empleado empleado = Empleado();
+    empleado.setNombre("Evan");
+    empleado.setPrimerApellido("Craft");
+
+    Empleado* p_copia = new Empleado(empleado);
+    cout << p_copia->nombreCompleto() << endl;
+
     return 0;
 }
 
@@ -56,4 +62,10 @@ void Empleado::setPrimerApellido(string primerApellido){
 Empleado::Empleado(){
     nombre = "Eliezer";
     primerApellido = "Lopez";
+}
+
+Empleado::Empleado(const Empleado& empleadoOriginal){
+    nombre = empleadoOriginal.nombre;
+    primerApellido = empleadoOriginal.primerApellido;
+    sueldoAnual = empleadoOriginal.sueldoAnual;
 }
