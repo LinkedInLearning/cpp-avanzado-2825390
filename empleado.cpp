@@ -32,6 +32,7 @@ private:
 
 class Supervisor {
 public:
+    Supervisor(const Empleado empleado);
     string nombreCompleto();
 private:
     string nombre, primerApellido;
@@ -39,6 +40,11 @@ private:
 };
 
 int main(){
+
+    Empleado empleado = Empleado("Pepe","Moreno");
+    Supervisor supervisor = empleado;
+
+    cout << supervisor.nombreCompleto() << endl;
 
     return 0;
 }
@@ -77,4 +83,10 @@ string Empleado::getPrimerApellido() const{
 
 float Empleado::getSueldoAnual() const{
     return sueldoAnual;
+}
+
+Supervisor::Supervisor(const Empleado empleado){
+    nombre = empleado.getNombre();
+    primerApellido = empleado.getPrimerApellido();
+    sueldoAnual = empleado.getSueldoAnual();
 }
