@@ -12,7 +12,7 @@ class Empleado {
 public:
 
     Empleado();
-    Empleado(string n, string pa);
+    Empleado(string n, string pa) : nombre(n), primerApellido(pa) {sueldoAnual = 60000;};
     float calcularSueldoMensual();
     string nombreCompleto();
 
