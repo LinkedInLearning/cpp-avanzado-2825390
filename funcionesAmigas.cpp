@@ -16,6 +16,7 @@ public:
     void setNombre(string nombre);
     void setPrimerApellido(string primerApellido);
     void setSueldoAnual(float sueldoAnual);
+    friend float calcularSueldoMedioAnualPorDepartamento(Supervisor* supervisor, Empleado* empleado1, Empleado* empleado2);
 
 private:
 
@@ -31,6 +32,7 @@ public:
     void setNombre(string nombre);
     void setPrimerApellido(string primerApellido);
     void setSueldoAnual(float sueldoAnual);
+    friend float calcularSueldoMedioAnualPorDepartamento(Supervisor* supervisor, Empleado* empleado1, Empleado* empleado2);
 
 private:
 
@@ -38,6 +40,10 @@ private:
     float sueldoAnual;
     static const int numeroDePagas = 12;
 };
+
+float calcularSueldoMedioAnualPorDepartamento(Supervisor* supervisor, Empleado* empleado1, Empleado* empleado2){
+    return (supervisor->sueldoAnual + empleado1->sueldoAnual + empleado2->sueldoAnual)/3;
+}
 
 int main(){
 
@@ -49,6 +55,7 @@ int main(){
     p_empleado2->setSueldoAnual(120800);
     p_supervisor->setSueldoAnual(150000);
 
+    cout << "Sueldo medio: " << calcularSueldoMedioAnualPorDepartamento(p_supervisor, p_empleado1, p_empleado2) << "€" << endl;
     return 0;
 }
 
