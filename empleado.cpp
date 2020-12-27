@@ -11,14 +11,17 @@ class Empleado {
 
 public:
 
-    Empleado();
-    Empleado(const Empleado& empleadoOriginal);
+    Empleado(string n, string pa):nombre(n),primerApellido(pa){};
     float calcularSueldoMensual();
     string nombreCompleto();
 
     void setNombre(string nombre);
     void setPrimerApellido(string primerApellido);
     void setSueldoAnual(float sueldoAnual);
+
+    string getNombre() const;
+    string getPrimerApellido() const;
+    float getSueldoAnual() const;
 
 private:
 
@@ -27,14 +30,15 @@ private:
     static const int numeroDePagas = 12;
 };
 
+class Supervisor {
+public:
+    string nombreCompleto();
+private:
+    string nombre, primerApellido;
+    float sueldoAnual;
+};
+
 int main(){
-
-    Empleado empleado = Empleado();
-    empleado.setNombre("Evan");
-    empleado.setPrimerApellido("Craft");
-
-    Empleado* p_copia = new Empleado(empleado);
-    cout << p_copia->nombreCompleto() << endl;
 
     return 0;
 }
@@ -44,6 +48,10 @@ float Empleado::calcularSueldoMensual(){
 }
 
 string Empleado::nombreCompleto(){
+    return (nombre + " " + primerApellido);
+}
+
+string Supervisor::nombreCompleto(){
     return (nombre + " " + primerApellido);
 }
 
@@ -59,13 +67,14 @@ void Empleado::setPrimerApellido(string primerApellido){
     this->primerApellido = primerApellido;
 }
 
-Empleado::Empleado(){
-    nombre = "Eliezer";
-    primerApellido = "Lopez";
+string Empleado::getNombre() const{
+    return nombre;
 }
 
-Empleado::Empleado(const Empleado& empleadoOriginal){
-    nombre = empleadoOriginal.nombre;
-    primerApellido = empleadoOriginal.primerApellido;
-    sueldoAnual = empleadoOriginal.sueldoAnual;
+string Empleado::getPrimerApellido() const{
+    return primerApellido;
+}
+
+float Empleado::getSueldoAnual() const{
+    return sueldoAnual;
 }
