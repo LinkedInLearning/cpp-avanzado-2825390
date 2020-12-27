@@ -12,7 +12,7 @@ class Empleado {
 public:
 
     Empleado();
-    Empleado(string nombre, string primerApellido);
+    Empleado(string n, string pa);
     float calcularSueldoMensual();
     string nombreCompleto();
 
@@ -56,9 +56,4 @@ void Empleado::setPrimerApellido(string primerApellido){
 Empleado::Empleado(){
     nombre = "Eliezer";
     primerApellido = "Lopez";
-}
-
-Empleado::Empleado(string nombre, string primerApellido){
-    this->nombre = nombre;
-    this->primerApellido = primerApellido;
 }
