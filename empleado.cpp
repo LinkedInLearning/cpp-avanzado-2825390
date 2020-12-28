@@ -32,21 +32,22 @@ private:
 
 class Supervisor {
 public:
+    Supervisor();
     explicit Supervisor(const Empleado empleado);
     string nombreCompleto();
 private:
     string nombre, primerApellido;
     float sueldoAnual;
+    // Empleado* p_empleado;
 };
 
 int main(){
 
-    Empleado empleado = Empleado("Pepe","Moreno");
-    Supervisor supervisor = Supervisor(empleado);
-
-    cout << supervisor.nombreCompleto() << endl;
-
     return 0;
+}
+
+Supervisor::Supervisor(){
+    // p_empleado = new Empleado("Eliezer", "Lopez");
 }
 
 float Empleado::calcularSueldoMensual(){
