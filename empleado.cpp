@@ -32,7 +32,7 @@ private:
 
 class Supervisor {
 public:
-    Supervisor(const Empleado empleado);
+    explicit Supervisor(const Empleado empleado);
     string nombreCompleto();
 private:
     string nombre, primerApellido;
@@ -42,7 +42,7 @@ private:
 int main(){
 
     Empleado empleado = Empleado("Pepe","Moreno");
-    Supervisor supervisor = empleado;
+    Supervisor supervisor = Supervisor(empleado);
 
     cout << supervisor.nombreCompleto() << endl;
 
