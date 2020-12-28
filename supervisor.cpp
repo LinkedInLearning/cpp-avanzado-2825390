@@ -9,7 +9,7 @@ using namespace std;
 
 class Empleado;
 
-class Supervisor{
+class Supervisor {
 public:
     void supervisaA(Empleado& empleado);
 private:
