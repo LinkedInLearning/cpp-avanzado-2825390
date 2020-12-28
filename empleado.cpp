@@ -16,6 +16,15 @@ private:
     float sueldoAnual;
 };
 
+class Supervisor : public Empleado {
+public:
+    Supervisor(string _nombre, string _primerApellido, int _idEquipo) : Empleado(_nombre, _primerApellido){
+        idEquipo = _idEquipo;
+    }
+private:
+    int idEquipo;
+};
+
 int main(){
     
     return 0;
