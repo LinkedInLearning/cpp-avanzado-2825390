@@ -6,7 +6,6 @@
 #include <string>
 #include <iostream>
 using namespace std;
-
 class Empleado;
 
 class Supervisor {
@@ -33,6 +32,8 @@ int main(){
     empleado.esSupervisadoPor(supervisor);
     supervisor.supervisaA(empleado);
 
+    empleado.getSupervisor()->getNombre();
+    
     return 0;
 };
 
