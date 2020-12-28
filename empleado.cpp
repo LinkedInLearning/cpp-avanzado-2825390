@@ -33,12 +33,13 @@ private:
 class Supervisor {
 public:
     Supervisor();
+    ~Supervisor();
     explicit Supervisor(const Empleado empleado);
     string nombreCompleto();
 private:
     string nombre, primerApellido;
     float sueldoAnual;
-    // Empleado* p_empleado;
+    Empleado* p_empleado;
 };
 
 int main(){
@@ -46,8 +47,12 @@ int main(){
     return 0;
 }
 
+Supervisor::~Supervisor(){
+    delete p_empleado;
+}
+
 Supervisor::Supervisor(){
-    // p_empleado = new Empleado("Eliezer", "Lopez");
+    p_empleado = new Empleado("Eliezer", "Lopez");
 }
 
 float Empleado::calcularSueldoMensual(){
