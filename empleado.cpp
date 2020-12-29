@@ -10,6 +10,7 @@ using namespace std;
 class Empleado{
 public:
     Empleado(string _nombre, string _primerApellido) : nombre(_nombre), primerApellido(_primerApellido){};
+protected:
     string nombreCompleto() const;
 private:
     string nombre, primerApellido;
