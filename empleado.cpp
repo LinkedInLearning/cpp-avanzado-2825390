@@ -19,42 +19,24 @@ public:
     void setNombre(string nombre);
     void setPrimerApellido(string primerApellido);
     void setSueldoAnual(float sueldoAnual);
-    void setNumeroDePagas(int numeroDePagas);
 
 private:
 
     string nombre, primerApellido;
     float sueldoAnual;
-    int numeroDePagas;
+    static const int numeroDePagas = 12;
 };
 
 int main(){
 
     Empleado* p_empleado = new Empleado("Evan", "Craft");
-    
-    p_empleado->setSueldoAnual(90294);
-    p_empleado->setNumeroDePagas(0);
+    cout << p_empleado->nombreCompleto() << endl;
 
     return 0;
 }
 
 float Empleado::calcularSueldoMensual(){
-    
-    float sueldoMensual;
-    string tipoDeError;
-
-    try{
-        if (numeroDePagas == 0){
-            tipoDeError = "El número de pagas es cero.";
-            throw tipoDeError;
-        }
-    } catch (const string& tipoDeError) {
-        cout << "Error: " << tipoDeError << endl;
-    }
-    
-    sueldoMensual = sueldoAnual/numeroDePagas;
-    
-    return sueldoMensual;
+    return (sueldoAnual/numeroDePagas);
 }
 
 string Empleado::nombreCompleto(){
@@ -76,8 +58,4 @@ void Empleado::setPrimerApellido(string primerApellido){
 Empleado::Empleado(){
     nombre = "Eliezer";
     primerApellido = "Lopez";
-}
-
-void Empleado::setNumeroDePagas(int numeroDePagas){
-    this->numeroDePagas = numeroDePagas;
 }
