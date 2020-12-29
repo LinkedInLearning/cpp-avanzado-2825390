@@ -3,7 +3,6 @@
  * Plataforma: LinkedIn Learning
  * Instructor: @EliezerLopez
  * */
-
 #include <string>
 #include <iostream>
 using namespace std;
