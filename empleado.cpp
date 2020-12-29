@@ -7,39 +7,62 @@
 #include <iostream>
 using namespace std;
 
-class Empleado{
+class Empleado {
+
 public:
-    Empleado(string _nombre, string _primerApellido) : nombre(_nombre), primerApellido(_primerApellido){};
-protected:
-    string nombreCompleto() const;
+
+    Empleado();
+    Empleado(string n, string pa) : nombre(n), primerApellido(pa) { sueldoAnual = 60000;};
+    float calcularSueldoMensual();
+    string nombreCompleto();
+
+    void setNombre(string nombre);
+    void setPrimerApellido(string primerApellido);
+    void setSueldoAnual(float sueldoAnual);
+    void setNumeroDePagas(int numeroDePagas);
+
 private:
+
     string nombre, primerApellido;
     float sueldoAnual;
-};
-
-class Supervisor : public Empleado {
-public:
-    Supervisor(string _nombre, string _primerApellido, int _idEquipo) : Empleado(_nombre, _primerApellido){
-        idEquipo = _idEquipo;
-    }
-private:
-    int idEquipo;
-};
-
-class Director : public Supervisor {
-public:
-    Director(string _nombre, string _primerApellido, int _idEquipo, float _presupuestoAnual): Supervisor(_nombre, _primerApellido, _idEquipo){
-        presupuestoAnual = _presupuestoAnual;
-    };
-private:
-    float presupuestoAnual;
+    int numeroDePagas;
 };
 
 int main(){
-    
-    return 0;
-};
 
-string Empleado::nombreCompleto() const{
+    Empleado* p_empleado = new Empleado("Evan", "Craft");
+    
+    p_empleado->setSueldoAnual(90294);
+    p_empleado->setNumeroDePagas(0);
+
+    return 0;
+}
+
+float Empleado::calcularSueldoMensual(){
+    return (sueldoAnual/numeroDePagas);
+}
+
+string Empleado::nombreCompleto(){
     return (nombre + " " + primerApellido);
+}
+
+void Empleado::setSueldoAnual(float sueldoAnual){
+    this->sueldoAnual = sueldoAnual;
+}
+
+void Empleado::setNombre(string nombre){
+    this->nombre = nombre;
+}
+
+void Empleado::setPrimerApellido(string primerApellido){
+    this->primerApellido = primerApellido;
+}
+
+Empleado::Empleado(){
+    nombre = "Eliezer";
+    primerApellido = "Lopez";
+}
+
+void Empleado::setNumeroDePagas(int numeroDePagas){
+    this->numeroDePagas = numeroDePagas;
 }
