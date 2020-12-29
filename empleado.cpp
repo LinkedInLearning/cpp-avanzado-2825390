@@ -43,9 +43,11 @@ float Empleado::calcularSueldoMensual(){
     float sueldoMensual;
     string tipoDeError;
 
-    if (numeroDePagas == 0){
-        tipoDeError = "El número de pagas es cero.";
-        throw tipoDeError;
+    try{
+        if (numeroDePagas == 0){
+            tipoDeError = "El número de pagas es cero.";
+            throw tipoDeError;
+        }
     }
     
     sueldoMensual = sueldoAnual/numeroDePagas;
