@@ -3,8 +3,8 @@
  * Plataforma: LinkedIn Learning
  * Instructor: @EliezerLopez
  * */
-#include <string>
 #include <iostream>
+#include "Empleado.hpp"
 using namespace std;
 
 int main(){
