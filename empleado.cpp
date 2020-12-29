@@ -6,7 +6,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
-
+ 
 int main(){
 
     Empleado* p_empleado = new Empleado("Evan", "Craft");
