@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-class Empleado{
+class Empleado {
 public:
     Empleado(string _nombre, string _primerApellido) : nombre(_nombre), primerApellido(_primerApellido){};
     string nombreCompleto() const;
@@ -23,6 +23,15 @@ public:
     }
 private:
     int idEquipo;
+};
+
+class Director : public Supervisor {
+public:
+    Director(string _nombre, string _primerApellido, int _idEquipo, float _presupuestoAnual): Supervisor(_nombre, _primerApellido, _idEquipo){
+        presupuestoAnual = _presupuestoAnual;
+    };
+private:
+    float presupuestoAnual;
 };
 
 int main(){
