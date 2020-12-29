@@ -3,7 +3,7 @@
  * Plataforma: LinkedIn Learning
  * Instructor: @EliezerLopez
  * */
-
+ 
 float Empleado::calcularSueldoMensual(){
     return (sueldoAnual/numeroDePagas);
 }
