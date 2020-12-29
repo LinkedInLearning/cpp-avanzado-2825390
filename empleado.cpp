@@ -39,7 +39,11 @@ int main(){
 }
 
 float Empleado::calcularSueldoMensual(){
-    return (sueldoAnual/numeroDePagas);
+    
+    float sueldoMensual;
+    sueldoMensual = sueldoAnual/numeroDePagas;
+    
+    return sueldoMensual;
 }
 
 string Empleado::nombreCompleto(){
