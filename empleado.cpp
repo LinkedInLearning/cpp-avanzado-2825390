@@ -48,6 +48,8 @@ float Empleado::calcularSueldoMensual(){
             tipoDeError = "El número de pagas es cero.";
             throw tipoDeError;
         }
+    } catch (const string& tipoDeError) {
+        cout << "Error: " << tipoDeError << endl;
     }
     
     sueldoMensual = sueldoAnual/numeroDePagas;
