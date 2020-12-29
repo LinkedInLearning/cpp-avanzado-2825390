@@ -4,7 +4,7 @@
  * Instructor: @EliezerLopez
  * */
 
-class Empleado {
+class Empleado{
 
 public:
 
