@@ -1,5 +1,5 @@
 # C++ avanzado
-This is the repository for the LinkedIn Learning course C++ avanzado avanzado. The full course is available from [LinkedIn Learning][lil-course-url].
+This is the repository for the LinkedIn Learning course C++ avanzado. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![C++ avanzado][lil-thumbnail-url] 
 Introdúcete en el lenguaje de programación C++ gracias a este contenido formativo que te guiará, paso a paso, por todos los conceptos clave a la hora de programar este lenguaje. Descubrirás cómo funciona la estructura de una clase en C++, profundizarás en la gestión de los métodos y aprenderás a controlar el acceso a atributos y operaciones desde diferentes perspectivas. Además, entenderás cómo crear y destruir objetos teniendo en cuenta la eficiencia de tu código, todo ello sin olvidar una eficiente gestión del manejo de errores.
