@@ -1,9 +1,8 @@
-# C++ Avanzado
-Éste es el repositorio para el curso `C++ Avanzado`de LinkedIn Learning, impartido por Eliezer López. El curso completo está disponible en [LinkedIn Learning](https://linkedin.com/learning/).
+# C++ avanzado
+This is the repository for the LinkedIn Learning course C++ avanzado. The full course is available from [LinkedIn Learning][lil-course-url].
 
-[![COURSENAME](COURSEIMAGE)](LICOURSEURL)
-
-[COURSEDESCRIPTION]
+![C++ avanzado][lil-thumbnail-url] 
+Introdúcete en el lenguaje de programación C++ gracias a este contenido formativo que te guiará, paso a paso, por todos los conceptos clave a la hora de programar este lenguaje. Descubrirás cómo funciona la estructura de una clase en C++, profundizarás en la gestión de los métodos y aprenderás a controlar el acceso a atributos y operaciones desde diferentes perspectivas. Además, entenderás cómo crear y destruir objetos teniendo en cuenta la eficiencia de tu código, todo ello sin olvidar una eficiente gestión del manejo de errores.
 
 ## Instrucciones
 Este repositorio tiene ramas para cada uno de los videos del curso. Puedes usar el menú de arriba mostrado en GitHub para cambiar a una rama específica y echar un vistazo al estado del curso en ese momento, o puede añadir `/tree/NOMBRE_DE_LA_RAMA` a la URL para ir a la rama a la que quieras acceder.
@@ -22,3 +21,15 @@ La rama `b` contiene el código tal y como se encuentra al comienzo del video. L
 	- Code Runner (como extensión de Visual Studio Code)
 2. Clona este repositorio en tu ordenador local usando la terminal (macOS), CMD (Windows), o una herramienta GUI como SourceTree. Aunque no necesitarás trabajar con ramas.
 3. Este curso ha sido grabado utilizando macOS. Si utilizas otro sistema operativo es posible que algunas instrucciones empleadas, archivos de configuración o directivas de compilación no se apliquen de la misma manera, y sea necesario localizar la forma de trabajo equivalente para dicho sistema operativo.
+
+
+### Instructor
+
+**Eliezer López**
+
+_Desarrollador de Software_
+
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/eliezer-lopez?u=104).
+
+[lil-course-url]: https://www.linkedin.com/learning/c-plus-plus-avanzado
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2825390/2825390-1606476013289-16x9.jpg
