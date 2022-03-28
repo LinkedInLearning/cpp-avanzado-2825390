@@ -1,7 +1,10 @@
-# C++ avanzado
-This is the repository for the LinkedIn Learning course C++ avanzado. The full course is available from [LinkedIn Learning][lil-course-url].
+# C++ avanzado 1
+Este es el repositorio del curso de LinkedIn Learning `[C++ avanzado 1]`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
 ![C++ avanzado][lil-thumbnail-url] 
+
+Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
+
 Introdúcete en el lenguaje de programación C++ gracias a este contenido formativo que te guiará, paso a paso, por todos los conceptos clave a la hora de programar este lenguaje. Descubrirás cómo funciona la estructura de una clase en C++, profundizarás en la gestión de los métodos y aprenderás a controlar el acceso a atributos y operaciones desde diferentes perspectivas. Además, entenderás cómo crear y destruir objetos teniendo en cuenta la eficiencia de tu código, todo ello sin olvidar una eficiente gestión del manejo de errores.
 
 ## Instrucciones
@@ -29,7 +32,7 @@ La rama `b` contiene el código tal y como se encuentra al comienzo del video. L
 
 _Desarrollador de Software_
 
-Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/eliezer-lopez?u=104).
+Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/eliezer-lopez).
 
 [lil-course-url]: https://www.linkedin.com/learning/c-plus-plus-avanzado
 [lil-thumbnail-url]: https://cdn.lynda.com/course/2825390/2825390-1606476013289-16x9.jpg
